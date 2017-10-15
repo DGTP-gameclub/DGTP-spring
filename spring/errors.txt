@@ -1,0 +1,13 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 302: Line is indented, but the preceding hide statement statement does not expect a block. Please check this line's indentation.
+    gu "자네 말두 하기야 옳지, 암 나이찼으니까 아들이 급하다는 게 잘못된 말은 아니야." 
+    ^
+
+File "game/script.rpy", line 356: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation.
+    '실토이지 나는 점순이가 아침상을 가지고 나올 때까지는 오늘은 또 얼마나 밥을 담았나, 하고 이것만 생각했다.' 
+    ^
+
+Ren'Py Version: Ren'Py 6.99.12.4.2187
