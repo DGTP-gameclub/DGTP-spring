@@ -359,6 +359,25 @@ define gui.history_text_xalign = 0.0
 ##
 ## The NVL-mode screen displays the dialogue spoken by NVL-mode characters.
 
+
+init python:
+    # 마우스 커서가 올라가지 않은 선택문 색상.
+    style.nvl_menu_choice.idle_color = "#000000"
+
+    # 마우스 커서가 올라간 선택문 색상.
+    style.nvl_menu_choice.hover_color = "#000000"
+
+    # 마우스 커서가 올라가지 않은 선택문의
+    # 바탕색.
+    #style.nvl_menu_choice_button.idle_background = "#191919"
+
+    # 마우스 커서가 올라간 선택문의
+    # 바탕색.
+    #style.nvl_menu_choice_button.hover_background = "#ff000044"
+
+    # 선택문을 들여쓰기할 간격.
+    #style.nvl_menu_choice_button.left_margin = 20
+
 ## The borders of the background of the NVL-mode background window.
 define gui.nvl_borders = Borders(0, 10, 0, 20)
 
@@ -393,6 +412,11 @@ define gui.nvl_thought_xalign = 0.0
 ## The position of nvl menu_buttons.
 define gui.nvl_button_xpos = 450
 define gui.nvl_button_xalign = 0.0
+
+
+#직접 추가
+
+define config.nvl_paged_rollback = True
 
 ## Localization ################################################################
 

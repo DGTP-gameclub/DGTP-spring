@@ -1,6 +1,6 @@
 ﻿## 게임 이미지 정의 ----- 봄봄!
 #==배경
-
+image bg 0 = ("dark.png")
 image bg 1 = im.FactorScale("bgs-field closeup.jpg",2)
 image bg 2 = im.FactorScale("bgs-field.jpg",3)
 image bg 3 = im.FactorScale("bgs-grassland.jpg",6)
@@ -76,11 +76,20 @@ define mung = Character('뭉태', color="#918EDB", image = "mung")
 
 
 
+label start:
 
+    scene bg 0
+    menu:
+        "봄봄을 읽어보신 적이 있으십니까?"
+        "네, 있어요...":
+            return
+        "아직 없는뎅?":
+            jump chapter1
+        
 
 
 # 게임 사이클-1 시작.---------------------------------
-label start:
+label chapter1:
     
     #1. 집 마당, 아침 
     stop music fadeout .3
