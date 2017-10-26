@@ -1,6 +1,6 @@
 ﻿## 게임 이미지 정의 ----- 봄봄!
 #==배경
-image bg 0 = ("dark.png")
+
 image bg 1 = im.FactorScale("bgs-field closeup.jpg",2)
 image bg 2 = im.FactorScale("bgs-field.jpg",3)
 image bg 3 = im.FactorScale("bgs-grassland.jpg",6)
@@ -8,14 +8,8 @@ image bg 4 = im.FactorScale("bgs-home.jpg",2)
 image bg 5 = im.FactorScale("bgs-paddy.jpg",3)
 image bg 6 = im.FactorScale("bgs-town.jpg",2)
 image bg 7 = im.FactorScale("sunsetland.png",2)
-
-
-
-
-
+image logo = "logo.png"
 #==인물
-
-
 # 게임 캐릭터 정의
 define none = Character(None, kind = nvl, image = "bg")
 
@@ -73,23 +67,18 @@ define gu = Character('구장', color="#B0D0D6", image = "gu")
 define mung = Character('뭉태', color="#918EDB", image = "mung")
 
 
-
-
-
+# 게임 사이클-1 시작.---------------------------------
 label start:
-
-    scene bg 0
-    menu:
-        "봄봄을 읽어보신 적이 있으십니까?"
-        "네, 있어요...":
-            return
-        "아직 없는뎅?":
+    menu virgin:
+        "김유정의 '봄봄'을 읽어보신 적이 있나요?"
+        "네, 있습니다.":
             jump chapter1
+        "아니요, 없습니다.":
+            jump original
         
 
 
-# 게임 사이클-1 시작.---------------------------------
-label chapter1:
+label original:
     
     #1. 집 마당, 아침 
     stop music fadeout .3
@@ -486,5 +475,22 @@ label chapter1:
         
         
         
-    
-    return
+
+
+
+
+
+
+
+
+
+
+label chapter1:
+    scene bg 1
+    he "넌 무엇 때문에 이 재미없는 길을 걷니?"
+
+
+
+
+label splashscreen:
+    scene logo

@@ -1,61 +1,21 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00start.rpy", line 188, in script call
-    call _gl_test
-  File "renpy/common/00gltest.rpy", line 361, in script
-    $ __gl_test()
-  File "renpy/common/00gltest.rpy", line 361, in <module>
-    $ __gl_test()
-  File "renpy/common/00gltest.rpy", line 287, in _m1_00gltest__gl_test
-    _gl_performance_test()
-  File "renpy/common/00gltest.rpy", line 304, in _gl_performance_test
-    ui.interact(suppress_underlay=True, suppress_overlay=True)
-IOError: Couldn't find file 'gui/window_icon.png'.
+  File "renpy/common/00start.rpy", line 107, in script
+    return
+Exception: Could not find return label (u'D:\\Making\\GitHub\\DGTP-spring\\spring/game/script.rpy', 1508943550, 32).
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "D:\Making\renpy-6.99.12.4-sdk\renpy\bootstrap.py", line 295, in bootstrap
-    renpy.main.main()
-  File "D:\Making\renpy-6.99.12.4-sdk\renpy\main.py", line 487, in main
-    run(restart)
-  File "D:\Making\renpy-6.99.12.4-sdk\renpy\main.py", line 147, in run
-    renpy.execution.run_context(True)
-  File "D:\Making\renpy-6.99.12.4-sdk\renpy\execution.py", line 761, in run_context
-    context.run()
-  File "renpy/common/00start.rpy", line 188, in script call
-    call _gl_test
-  File "renpy/common/00gltest.rpy", line 361, in script
-    $ __gl_test()
-  File "D:\Making\renpy-6.99.12.4-sdk\renpy\ast.py", line 814, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "D:\Making\renpy-6.99.12.4-sdk\renpy\python.py", line 1719, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "renpy/common/00gltest.rpy", line 361, in <module>
-    $ __gl_test()
-  File "renpy/common/00gltest.rpy", line 287, in _m1_00gltest__gl_test
-    _gl_performance_test()
-  File "renpy/common/00gltest.rpy", line 304, in _gl_performance_test
-    ui.interact(suppress_underlay=True, suppress_overlay=True)
-  File "D:\Making\renpy-6.99.12.4-sdk\renpy\ui.py", line 285, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "D:\Making\renpy-6.99.12.4-sdk\renpy\display\core.py", line 2494, in interact
-    self.start()
-  File "D:\Making\renpy-6.99.12.4-sdk\renpy\display\core.py", line 1686, in start
-    self.set_mode()
-  File "D:\Making\renpy-6.99.12.4-sdk\renpy\display\core.py", line 1916, in set_mode
-    if draw.set_mode(virtual_size, physical_size, fullscreen):
-  File "renpy/gl/gldraw.pyx", line 192, in renpy.gl.gldraw.GLDraw.set_mode (gen\renpy.gl.gldraw.c:2802)
-    renpy.display.interface.post_init()
-  File "D:\Making\renpy-6.99.12.4-sdk\renpy\display\core.py", line 1717, in post_init
-    self.set_icon()
-  File "D:\Making\renpy-6.99.12.4-sdk\renpy\display\core.py", line 1748, in set_icon
-    renpy.loader.load(icon),
-  File "D:\Making\renpy-6.99.12.4-sdk\renpy\loader.py", line 543, in load
-    raise IOError("Couldn't find file '%s'." % name)
-IOError: Couldn't find file 'gui/window_icon.png'.
+  File "renpy/common/00start.rpy", line 107, in script
+    return
+  File "D:\Making\renpy-6.99.12.4-sdk\renpy\ast.py", line 1376, in execute
+    next_node(renpy.game.context().lookup_return(pop=True))
+  File "D:\Making\renpy-6.99.12.4-sdk\renpy\execution.py", line 552, in lookup_return
+    raise Exception("Could not find return label {!r}.".format(self.return_stack[-1]))
+Exception: Could not find return label (u'D:\\Making\\GitHub\\DGTP-spring\\spring/game/script.rpy', 1508943550, 32).
 
 Windows-8-6.2.9200
 Ren'Py 6.99.12.4.2187
-spring 1.0
+우리는 봄 1.0

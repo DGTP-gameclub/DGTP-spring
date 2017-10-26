@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("spring")
+define config.name = _("우리는 봄")
 
 
 
